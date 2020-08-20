@@ -17,4 +17,13 @@ class YandexTests {
 
         $("html").shouldHave(text("суверенный лепрозорий"));
     }
+    
+    @Test
+    void mailruSearchTest() {
+        open("https://ya.ru");
+
+        $("#text").setValue("mail.ru").pressEnter();
+
+        $("html").shouldHave(text("российский коммуникационный портал"));
+    }
 }
